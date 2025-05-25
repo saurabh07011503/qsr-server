@@ -9,9 +9,9 @@ const menuRoutes = require('./routes/menu');
 
 const app = express();
 
-// ✅ Correct CORS configuration
 const allowedOrigins = [
   'http://localhost:8081',
+  'http://localhost:8082',
   'https://qsr-client.vercel.app'
 ];
 
@@ -25,7 +25,7 @@ app.use(cors({
   },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true // Enable this if using cookies or headers for auth
+  credentials: true 
 }));
 
 // Middleware
